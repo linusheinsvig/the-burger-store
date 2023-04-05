@@ -2,7 +2,8 @@ print("Welcome to The Burger Store")
 
 # Empty list to store user's choices
 choices = []
-
+# Users shopping cart
+total_cost = 0
 
 while True:
     print("Can I please take your order?\n")
@@ -35,7 +36,10 @@ while True:
 
     # Add the burger choice to the list
     burger_choice = burgers[burger_order][0]
-    choices.append(burger_choice)        
+    choices.append(burger_choice)   
+
+    # Add burger to the total cost
+    total_cost += burgers[burger_order][1]     
 
     # Extras Menu
     extras = {
@@ -63,7 +67,10 @@ while True:
 
     # Add the extras choice to the list
     extras_choice = extras[extras_order][0]
-    choices.append(extras_choice)        
+    choices.append(extras_choice) 
+
+    # Add extras to the total cost
+    total_cost += extras[extras_order][1]         
 
     # Sides Menu
     sides = {
@@ -92,7 +99,10 @@ while True:
 
     # Add the sides choice to the list
     sides_choice = sides[sides_order][0]
-    choices.append(sides_choice)        
+    choices.append(sides_choice)
+
+    # Add sides to the total cost
+    total_cost += sides[sides_order][1]          
 
     # Drinks Menu
     drinks = {
@@ -123,12 +133,14 @@ while True:
     drinks_choice = drinks[drinks_order][0]
     choices.append(drinks_choice)
 
+    # Add drinks to the total cost
+    total_cost += drinks[drinks_order][1]  
+
     # Print the user's choices
     print(f"You ordered: {burger_choice} with extra {extras_choice}, {sides_choice} on the side and {drinks_choice} to drink\n")
 
     # Print the total cost for the user
-    total = burgers[burger_order][1] + extras[extras_order][1] + sides[sides_order][1] + drinks[drinks_order][1]
-    print(f"The total cost of your order is ${total:.2f}.")
+    print(f"The total cost of your order is ${total_cost:.2f}.")
 
     add_more = input("Would you like to add more items to your order? (y/n): ")
     if add_more.lower() == "n":
