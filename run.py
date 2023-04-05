@@ -1,5 +1,5 @@
 print("Welcome to The Burger Store")
-print("Can I please take your order?")
+print("Can I please take your order?\n")
 
 """
 Burger menu and ordering function
@@ -17,13 +17,16 @@ print("Burgers:")
 for i, (item, price) in burgers.items():
     print(f"{i}. {item}: ${price:.2f}")
 
-burger_order = int(input("Enter the number of the burger you would like to order (1-5): "))
-
-if burger_order in burgers:
-    order, price = burgers[burger_order]
-    print(f"You ordered the {order} burger, which costs ${price:.2f}.")
-else:
-    print("Sorry, that item is not on the menu.")
+while True:
+    try:
+        burger_order = int(input("\nEnter the number of the burger you would like to order (1-5): "))
+        if burger_order not in burgers:
+            raise ValueError("Please enter a number thats on the menu")
+        order, price = burgers[burger_order]
+        print(f"You ordered the {order} burger, which costs ${price:.2f}.\n")
+        break
+    except ValueError as error:
+        print("Please enter a number thats on the menu")
 
 """
 Extras menu and choise
@@ -39,13 +42,16 @@ print("Would you like to add something to your burger?:")
 for i, (item, price) in extras.items():
     print(f"{i}. {item}: ${price:.2f}")
 
-extras_order = int(input("Enter the number of the extras you would like to order (1-3): "))
-
-if extras_order in extras:
-    order, price = extras[extras_order]
-    print(f"You choose to add {order} to your burger, which costs ${price:.2f}.")
-else:
-    print("Sorry, that item is not on the menu.")
+while True:
+    try:
+        extras_order = int(input("\nEnter the number of the extras you would like to order (1-3): "))
+        if extras_order not in extras:
+            raise ValueError("Please enter a number thats on the menu")
+        order, price = extras[extras_order]
+        print(f"You choose to add {order} to your burger, which costs ${price:.2f}.\n")
+        break
+    except ValueError as error:
+        print("Please enter a number thats on the menu")
 
 """
 Menu and chooise of sides
@@ -61,13 +67,16 @@ print("Would you like to add any sides to your order?:")
 for i, (item, price) in sides.items():
     print(f"{i}. {item}: ${price:.2f}")
 
-sides_order = int(input("Enter the number of the side you would like to order (1-4): "))
-
-if sides_order in sides:
-    order, price = sides[sides_order]
-    print(f"You choose to add {order} to your order, which costs ${price:.2f}.")
-else:
-    print("Sorry, that item is not on the menu.")
+while True:
+    try:
+        sides_order = int(input("\nEnter the number of the sides you would like to order (1-4): "))
+        if sides_order not in sides:
+            raise ValueError("Please enter a number thats on the menu")
+        order, price = sides[sides_order]
+        print(f"You choose to add {order} to your order, which costs ${price:.2f}.\n")
+        break
+    except ValueError as error:
+        print("Please enter a number thats on the menu")
 
 """
 Drinks Menu
@@ -83,13 +92,16 @@ print("Would you like something to drink?:")
 for i, (item, price) in drinks.items():
     print(f"{i}. {item}: ${price:.2f}")
 
-drinks_order = int(input("Enter the number of the drink you would like to order (1-4): "))
-
-if drinks_order in drinks:
-    order, price = drinks[drinks_order]
-    print(f"You choose to add {order} to your order, which costs ${price:.2f}.")
-else:
-    print("Sorry, that item is not on the menu.")
+while True:
+    try:
+        drinks_order = int(input("\nEnter the number of the drink you would like to order (1-4): "))
+        if drinks_order not in drinks:
+            raise ValueError("Please enter a number thats on the menu")
+        order, price = drinks[drinks_order]
+        print(f"You choose to add {order} to your order, which costs ${price:.2f}.\n")
+        break
+    except ValueError as error:
+        print("Please enter a number thats on the menu")
 
 """
 Calculating total price
