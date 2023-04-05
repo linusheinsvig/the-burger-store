@@ -91,4 +91,8 @@ if drinks_order in drinks:
 else:
     print("Sorry, that item is not on the menu.")
 
-
+"""
+Calculating total price
+"""
+total = burgers[burger_order][1] + extras[extras_order][1] + sides[sides_order][1] + drinks[drinks_order][1]
+print(f"The total cost of your order is ${total:.2f}.")
