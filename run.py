@@ -1,18 +1,30 @@
 burgers = {
-    "Original": 8,
-    "Cheeze": 9,
-    "Mexicana": 10,
-    "Paris": 10,
-    "Vegi": 9,
+    1: ("Original", 8),
+    2: ("Cheeze", 9),
+    3: ("Mexicana", 10),
+    4: ("Paris", 10),
+    5: ("Vegi", 9),
 }
-print(burgers)
+
+print("Menu:")
+for i, (item, price) in burgers.items():
+    print(f"{i}. {item}: ${price:.2f}")
+
+burger_order = int(input("Enter the number of the burger you would like to order (1-5): "))
+
+if burger_order in burgers:
+    order, price = burgers[burger_order]
+    print(f"You ordered the {order} burger, which costs ${price:.2f}.")
+else:
+    print("Sorry, that item is not on the menu.")
+
 
 extras = {
     "Bacon": 2,
     "Cheese": 2,
     "Extra Meat": 5,
 }
-print(extras)
+
 
 sides = {
     "Fries": 3,
@@ -20,7 +32,6 @@ sides = {
     "Onion Rings": 4,
     "Chili Cheese": 4,
 }
-print(sides)
 
 drinks = {
     "Soda": 2,
@@ -28,4 +39,5 @@ drinks = {
     "Milk": 2,
     "Orange Juice": 3,
 }
-print(drinks)
+
+
