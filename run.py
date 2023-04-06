@@ -5,17 +5,40 @@ choices = []
 # Users shopping cart
 total_cost = 0
 
+# Burger Menu 
+burgers = {
+    1: ("Original Burger", 8),
+    2: ("Cheeze Burger", 9),
+    3: ("Mexicana Burger", 10),
+    4: ("Chicken Burger", 9),
+    5: ("Vegi Burger", 9),
+    }
+
+# Extras Menu
+extras = {
+    1: ("Bacon", 2),
+    2: ("Cheese", 2),
+    3: ("Extra Meat", 5),
+    }  
+
+# Sides Menu
+sides = {
+    1: ("Fries", 3),
+    2: ("Sweet Potato Fries", 3),
+    3: ("Onion Rings", 4),
+    4: ("Chili Cheese", 4),
+    } 
+
+# Drinks Menu
+drinks = {
+    1: ("Soda", 2),
+    2: ("Water", 1),
+    3: ("Milk", 2),
+    4: ("Orange Juice", 3),
+    }         
+
 while True:
     print("Can I please take your order?\n")
-
-    # Burger Menu 
-    burgers = {
-        1: ("Original Burger", 8),
-        2: ("Cheeze Burger", 9),
-        3: ("Mexicana Burger", 10),
-        4: ("Chicken Burger", 9),
-        5: ("Vegi Burger", 9),
-    }
 
     # Displaying burger choices
     print("Burgers:")
@@ -51,13 +74,6 @@ while True:
     else:
         print("Please enter yes or no y/n")     
 
-    # Extras Menu
-    extras = {
-        1: ("Bacon", 2),
-        2: ("Cheese", 2),
-        3: ("Extra Meat", 5),
-    }
-
     # Displaying extras choices
     for i, (item, price) in extras.items():
         print(f"{i}. {item}: ${price:.2f}")
@@ -91,14 +107,6 @@ while True:
     else:
         print("Please enter yes or no y/n")     
 
-    # Sides Menu
-    sides = {
-        1: ("Fries", 3),
-        2: ("Sweet Potato Fries", 3),
-        3: ("Onion Rings", 4),
-        4: ("Chili Cheese", 4),
-    }
-
     # Displaying sides choices
     for i, (item, price) in sides.items():
         print(f"{i}. {item}: ${price:.2f}")
@@ -131,14 +139,6 @@ while True:
         print("Lovely, what would you like?\n")
     else:
         print("Please enter yes or no y/n")     
-
-    # Drinks Menu
-    drinks = {
-        1: ("Soda", 2),
-        2: ("Water", 1),
-        3: ("Milk", 2),
-        4: ("Orange Juice", 3),
-    }
 
     # Displaying drinks choices
     for i, (item, price) in drinks.items():
