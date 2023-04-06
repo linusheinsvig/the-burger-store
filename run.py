@@ -7,6 +7,7 @@ total_cost = 0
 
 # Burger Menu 
 burgers = {
+    0: ("No thanks", 0),
     1: ("Original Burger", 8),
     2: ("Cheeze Burger", 9),
     3: ("Mexicana Burger", 10),
@@ -16,6 +17,7 @@ burgers = {
 
 # Extras Menu
 extras = {
+    0: ("No thanks", 0),
     1: ("Bacon", 2),
     2: ("Cheese", 2),
     3: ("Extra Meat", 5),
@@ -23,6 +25,7 @@ extras = {
 
 # Sides Menu
 sides = {
+    0: ("No thanks", 0),
     1: ("Fries", 3),
     2: ("Sweet Potato Fries", 3),
     3: ("Onion Rings", 4),
@@ -31,6 +34,7 @@ sides = {
 
 # Drinks Menu
 drinks = {
+    0: ("No thanks", 0),
     1: ("Soda", 2),
     2: ("Water", 1),
     3: ("Milk", 2),
@@ -62,19 +66,10 @@ while True:
     choices.append(burger_choice)   
 
     # Add burger to the total cost
-    total_cost += burgers[burger_order][1]     
-
-    # Asks the user if they would like to add something more
-    add_more = input("Would you like to add something extra on your burger? (y/n): ")
-    if add_more.lower() == "n":
-        print("Thank you for your order, your food is beeing prepared!")
-        break
-    elif add_more.lower() == "y":
-        print("Lovely, what would you like?\n")
-    else:
-        print("Please enter yes or no y/n")     
+    total_cost += burgers[burger_order][1]      
 
     # Displaying extras choices
+    print("Would you like to add something to your burger?")
     for i, (item, price) in extras.items():
         print(f"{i}. {item}: ${price:.2f}")
 
@@ -97,17 +92,8 @@ while True:
     # Add extras to the total cost
     total_cost += extras[extras_order][1]         
 
-    # Asks the user if they would like to add something more
-    add_more = input("Would you like any side orders? (y/n): ")
-    if add_more.lower() == "n":
-        print("Thank you for your order, your food is beeing prepared!")
-        break
-    elif add_more.lower() == "y":
-        print("Lovely, what would you like?\n")
-    else:
-        print("Please enter yes or no y/n")     
-
     # Displaying sides choices
+    print("Would you like any side orders?")
     for i, (item, price) in sides.items():
         print(f"{i}. {item}: ${price:.2f}")
 
@@ -128,19 +114,10 @@ while True:
     choices.append(sides_choice)
 
     # Add sides to the total cost
-    total_cost += sides[sides_order][1]          
-
-    # Asks the user if they would like to add something more
-    add_more = input("Would you like something to drink? (y/n): ")
-    if add_more.lower() == "n":
-        print("Thank you for your order, your food is beeing prepared!")
-        break
-    elif add_more.lower() == "y":
-        print("Lovely, what would you like?\n")
-    else:
-        print("Please enter yes or no y/n")     
+    total_cost += sides[sides_order][1]           
 
     # Displaying drinks choices
+    print("Would you like something to drink?")
     for i, (item, price) in drinks.items():
         print(f"{i}. {item}: ${price:.2f}")
 
