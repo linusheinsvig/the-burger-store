@@ -1,10 +1,5 @@
 print("Welcome to The Burger Store")
 
-# Empty list to store user's choices
-choices = []
-# Users shopping cart
-total_cost = 0
-
 # Burger Menu 
 burgers = {
     0: ("No thanks", 0),
@@ -39,8 +34,23 @@ drinks = {
     2: ("Water", 1),
     3: ("Milk", 2),
     4: ("Orange Juice", 3),
-    }         
+}      
 
+while True:    
+    # Empty list to store user's choices
+    choices = []
+    # Users shopping cart
+    total_cost = 0
+
+    start = input("Do you want to place an order? (y/n): ")
+    if start.lower() == "y":
+        break
+    elif start.lower() == "n":
+        print("Thank you for stopping by!")
+        exit()
+    else:
+        print("Invalid input. Please enter Y or N.")
+      
 while True:
     print("Can I please take your order?\n")
 
