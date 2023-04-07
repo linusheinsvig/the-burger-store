@@ -87,8 +87,39 @@ https://pep8ci.herokuapp.com/
         </li></ul>
 </ul>
 
-## Deployment
-        
+## Deployment on Heroku
+<hr>
+<ul>
+    <li>Createt an account on Heroku website
+
+https://www.heroku.com
+<li>Click "New -> Create new app" button
+<li>Insert your app's Name and Choose your region then click the "Create App" button
+<li>On the menu on the top click "Setting"
+<li>Go to "Buildpacks" and select "Add buildpacks"
+<li>Add Python and NodeJS buildpack, in that order
+<li>Click on the "Depoly" tab and select GitHub
+<li>Click "App connected to GitHub" and enter your GitHub repository
+<li>Choose if you want to manual or automatic deplyment
+<li>When deployment is finnished a link will be provided to your site
+</li>
+</ul>
+
+## Clone the Repository Code Locally
+<hr>
+Navigate to the GitHub Repository you want to clone
+<ul>
+<li>Click on the code drop down button
+<li>Select HTTPS
+<li>Copy the repository link to your clipboard
+<li>Open you IDE of choice (git must be installed for the next step)
+<li>Type git clone copied-git-url into the IDE termial
+<li>The project will now been cloned on your local machine for use.
+</li></ul>
+
+## Credits
+<hr>
+
 
 
 
