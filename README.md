@@ -20,7 +20,7 @@ After the user has completed their first order they are given the opportunity to
 ### Existing Features
 <ul>
     <li>Opening question if the user wants to place an order
-    <ul><li>Allows the user to answer yes or no
+        <ul><li>Allows the user to answer yes or no
         <li>If user selects yes the burger menu shows up and they can start to place their order
         <li>If user selects no they recive a message "Thank you for stopping by!" and the application closes</li></ul>
     <li>Menus for burgers, extras, sides and drinks
@@ -35,6 +35,13 @@ After the user has completed their first order they are given the opportunity to
         <li>If user chooses no the user recives a message "Thank you for your order, your food is beeing prepared!" and the code restarts from the beging with an empty basket</li></ul>
 </ul>
 
+## Future Features
+<ul>
+    <li>Get menu from Google Sheets insted of having it in the code
+        <ul><li>Would make it easier for other users to change the menu</li></ul>
+    <li>Being able to skip a step without adding a free product to the basket
+        <ul><li>Would make the recipt look cleaner and easier to read</li></ul>
+            
 
 
     
