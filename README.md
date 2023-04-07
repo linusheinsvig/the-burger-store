@@ -119,8 +119,14 @@ Navigate to the GitHub Repository you want to clone
 
 ## Credits
 <hr>
+<li>Craig Godbolds youtube channel - Helped me with some ideas for this project
 
+https://www.youtube.com/@craiggodbold9488
+<li>Stack Overflow - Helped me better understand While loops
 
+https://stackoverflow.com/
+</li>
+</ul>
 
 
 
