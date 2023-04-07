@@ -42,7 +42,7 @@ while True:
     # Users shopping cart
     total_cost = 0
 
-    start = input("Do you want to place an order? (y/n): ")
+    start = input("Do you want to place an order? (y/n): \n")
     if start.lower() == "n":
         print("Thank you for stopping by!")
         break
@@ -61,7 +61,7 @@ while True:
         # Checking if choice is valid
         while True:
             try:
-                burger_order = int(input("\nEnter the number of the burger you would like to order (1-5): "))
+                burger_order = int(input("\nEnter the number of the burger you would like to order (1-5):\n "))
                 if burger_order not in burgers:
                     raise ValueError("Please enter a number thats on the menu")
                 order, price = burgers[burger_order]
@@ -85,7 +85,7 @@ while True:
         # Checking if choice is valid
         while True:
             try:
-                extras_order = int(input("\nEnter the number of the extras you would like to order (1-3): "))
+                extras_order = int(input("\nEnter the number of the extras you would like to order (1-3):\n "))
                 if extras_order not in extras:
                     raise ValueError("Please enter a number thats on the menu")
                 order, price = extras[extras_order]
@@ -109,7 +109,7 @@ while True:
         # Checking if choice is valid
         while True:
             try:
-                sides_order = int(input("\nEnter the number of the sides you would like to order (1-4): "))
+                sides_order = int(input("\nEnter the number of the sides you would like to order (1-4):\n "))
                 if sides_order not in sides:
                     raise ValueError("Please enter a number thats on the menu")
                 order, price = sides[sides_order]
@@ -133,7 +133,7 @@ while True:
         # Checking if choice is valid
         while True:
             try:
-                drinks_order = int(input("\nEnter the number of the drink you would like to order (1-4): "))
+                drinks_order = int(input("\nEnter the number of the drink you would like to order (1-4):\n "))
                 if drinks_order not in drinks:
                     raise ValueError("Please enter a number thats on the menu")
                 order, price = drinks[drinks_order]
@@ -156,7 +156,7 @@ while True:
         print(f"The total cost of your order is ${total_cost:.2f}.")
 
         # Asks the user if they would like to add something more
-        add_more = input("Would you like to add more items to your order? (y/n): ")
+        add_more = input("Would you like to add more items to your order? (y/n):\n ")
         if add_more.lower() == "n":
             print("Thank you for your order, your food is beeing prepared!")
             break
