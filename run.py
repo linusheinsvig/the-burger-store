@@ -61,7 +61,7 @@ while True:
         # Checking if choice is valid
         while True:
             try:
-                burger_order = int(input("\nEnter the number of the burger you would like to order (1-5):\n "))
+                burger_order = int(input("\nEnter the number of the burger you would like to order (0-5):\n "))
                 if burger_order not in burgers:
                     raise ValueError("Please enter a number thats on the menu")
                 order, price = burgers[burger_order]
@@ -85,7 +85,7 @@ while True:
         # Checking if choice is valid
         while True:
             try:
-                extras_order = int(input("\nEnter the number of the extras you would like to order (1-3):\n "))
+                extras_order = int(input("\nEnter the number of the extras you would like to order (0-3):\n "))
                 if extras_order not in extras:
                     raise ValueError("Please enter a number thats on the menu")
                 order, price = extras[extras_order]
@@ -109,7 +109,7 @@ while True:
         # Checking if choice is valid
         while True:
             try:
-                sides_order = int(input("\nEnter the number of the sides you would like to order (1-4):\n "))
+                sides_order = int(input("\nEnter the number of the sides you would like to order (0-4):\n "))
                 if sides_order not in sides:
                     raise ValueError("Please enter a number thats on the menu")
                 order, price = sides[sides_order]
@@ -133,7 +133,7 @@ while True:
         # Checking if choice is valid
         while True:
             try:
-                drinks_order = int(input("\nEnter the number of the drink you would like to order (1-4):\n "))
+                drinks_order = int(input("\nEnter the number of the drink you would like to order (0-4):\n "))
                 if drinks_order not in drinks:
                     raise ValueError("Please enter a number thats on the menu")
                 order, price = drinks[drinks_order]

@@ -1,31 +1,40 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# The Burger Store!
 
-Welcome Linus Heinsvig,
+The burger store is a simple burger ordering program that runs in Code Institute's mockup terminal on Heroku.
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+It allows the user to put in an order for hamburgers, sides and drinks all of their choosing.
 
-## Reminders
+Have a go for yourself!
+# link to heroku
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+# Main picture
 
-## Creating the Heroku app
+## How to use it?
+<hr>
+Since it's a command line interface program the user simply makes their choices with numbers between 1-5 and answer questions with y for Yes and n for No.
+After the user has completed their first order they are given the opportunity to add a menu for their friend aswell or finish their order with just food for themself.
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+## Features
+<hr>
 
-1. `heroku/python`
-2. `heroku/nodejs`
+### Existing Features
+<ul>
+    <li>Opening question if the user wants to place an order
+    <ul><li>Allows the user to answer yes or no
+        <li>If user selects yes the burger menu shows up and they can start to place their order
+        <li>If user selects no they recive a message "Thank you for stopping by!" and the application closes</li></ul>
+    <li>Menus for burgers, extras, sides and drinks
+        <ul><li>The menu items are found in the begining of the code consisting of key-value pairs for all the items</li></ul>
+    <li> Hamburger menu with choices 0-5
+    <li> Extras menu with choices 0-3
+    <li> Sides menus with choices 0-4
+    <li> Drinks menu with choices 0-4
+    <li> All the menus allows the user to choose No Thanks (0) which add no cost to their basket and lets them skip that step
+    <li>Question if they would like to add more products
+        <ul><li>If user chooses yes the ordering proces starts from the begining again but keep the user choices in their basket
+        <li>If user chooses no the user recives a message "Thank you for your order, your food is beeing prepared!" and the code restarts from the beging with an empty basket</li></ul>
+</ul>
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
 
-Connect your GitHub repository and deploy as normal.
-
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
------
-Happy coding!
+    
